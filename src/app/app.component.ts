@@ -8,10 +8,6 @@ import { PeliculasService } from './services/peliculas.service';
 })
 export class AppComponent {
   title = 'peliculas';
-  constructor(private peliculasService: PeliculasService) {
-    this.peliculasService.getCartelera().subscribe((resp) => {
-      console.log(resp);
-      
-    });
-  }
+
+
 }
