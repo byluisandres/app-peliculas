@@ -1,13 +1,13 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    <div class="swiper-slide" *ngFor="let movie of movies" [ngStyle]="{
+    <div class="swiper-slide" *ngFor="let movie of moviesSlideshow" [ngStyle]="{
       'background-size':'cover',
       'background-image':'url(http://image.tmdb.org/t/p/w500' + movie.backdrop_path +')'
     }">
       <div class="movies-description">
         <h3>{{ movie.title }}</h3>
         <p>
-          {{ movie.overview | slice: 0:150 }}
+          {{ movie.overview }}
         </p>
       </div>
     </div>

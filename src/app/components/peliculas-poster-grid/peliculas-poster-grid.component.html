@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-3 mb-4 postion-relative" *ngFor="let movie of movies">
+    <img
+      src="http://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+      alt="imágen poster"
+      class="img-fluid poster"
+    />
+    <div>
+      <h3>{{ movie.title }}</h3>
+      <div class="row">
+        <div class="col-10">
+          <small class="text-white"
+            >Fecha de estreno: {{ movie.release_date | date:"dd-MM-yy"}}
+          </small>
+        </div>
+        <div class="col-2 text-white float-right">
+          {{ movie.vote_average | number: "1.1-2" }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
