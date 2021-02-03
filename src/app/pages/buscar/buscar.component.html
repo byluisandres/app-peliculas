@@ -1,1 +1,5 @@
-<p>buscar works!</p>
+<h1>Resultados para: <span>{{texto}}</span></h1>
+
+<div *ngIf="movies.length > 0">
+  <app-peliculas-poster-grid [movies]="movies"></app-peliculas-poster-grid>
+</div>

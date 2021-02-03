@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-
     PeliculasPosterGridComponent,
 
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,PipesModule],
   exports: [NavbarComponent, SlideshowComponent, PeliculasPosterGridComponent],
 })
 export class ComponentsModule {}
