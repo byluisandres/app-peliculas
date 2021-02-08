@@ -1,1 +1,35 @@
-<p>pelicula works!</p>
+<div class="row" *ngIf="pelicula">
+  <div class="col-md-6">
+    <img
+      [src]="pelicula.poster_path | poster"
+      [alt]="pelicula.title"
+      class="img-fluid"
+    />
+  </div>
+  <div class="col-md-6">
+    <h3>{{ pelicula.title }}</h3>
+    <div class="row">
+      <div class="col text-white">
+        {{ pelicula.vote_average }}
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col text-white">
+        {{ pelicula.overview }}
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <button class="btn btn-outline-info" (click)="regresar()">
+          Regresar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5" *ngIf="cast.length > 0">
+    <div class="col">
+      <app-cast-slideshow [cast]="cast"></app-cast-slideshow>
+    </div>
+  </div>
+</div>
